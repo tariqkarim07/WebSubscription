@@ -12,5 +12,5 @@ for predefined websites data
 -  run "php -S localhost:8000 -t public" / alternate you can create virtual host 
 
 for apis please check postman documentaions
-public link for apis
+import collection using public link for
 https://www.getpostman.com/collections/c0cadea1f99f36f6cdc3
