@@ -51,7 +51,8 @@ class CommandSendEmail extends Command
                 $data = array(
                     "name"=>$subscriber->user->name,
                     "email"=>$subscriber->user->email,
-                    "text"=>$new_post->post_text,
+                    "post_title"=>$new_post->post_title,
+                    "post_text"=>$new_post->post_text,
                     );
 
                 $emailJob = (new SendEmailJob($data));

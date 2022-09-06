@@ -21,7 +21,10 @@ class SendEmailJob extends Job
      */
     public function handle()
     {
-        Mail::to($this->email_data['email'])->send(new subcriptionEmail($this->email_data));
+        $template = 'emails.new_post_email';
+        Mail::send($template, ['data' => $this->email_data], function ($mail)  {
+            $mail->from(env("MAIL_FROM_ADDRESS"), env("MAIL_FROM_NAME"))->to($this->email_data['email'])->subject("New Post Added");
+        });
     }
 
 }
